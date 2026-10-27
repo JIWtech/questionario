@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a8321c" />
+  <title>Questionário de Atendimento — Casa da Pizza</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">NORIA • Levantamento de atendimento</p>
+      <h1>Questionário de Atendimento — Casa da Pizza</h1>
+      <p class="subtitle">Preencha as regras do seu atendimento pelo WhatsApp. Perguntas dependentes aparecem automaticamente conforme suas respostas.</p>
+    </div>
+    <div class="progress-wrap" aria-live="polite">
+      <span id="progressText">0% respondido</span>
+      <div class="progress"><div id="progressBar"></div></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-card">
+        <strong>Navegação</strong>
+        <nav id="sectionNav"></nav>
+      </div>
+      <div class="side-card muted">
+        <strong>Salvamento automático</strong>
+        <p>As respostas ficam salvas neste navegador enquanto o formulário é preenchido.</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="notice">
+        <strong>Como preencher</strong>
+        <p>A IA da NORIA só vai informar preços, sabores, taxas e promoções que estiverem neste questionário — ela não inventa valores. Algumas respostas já vieram do Instagram <b>@casadapizzaangra</b> e só precisam ser confirmadas. Nos campos de texto você também pode usar <b>Ainda não definido</b>, <b>Não se aplica</b> ou <b>Encaminhar para a equipe</b>.</p>
+      </div>
+
+      <section class="meta-card" id="identificacao">
+        <h2>Identificação do preenchimento</h2>
+        <div class="grid two">
+          <label>Nome de quem está respondendo<input id="meta_nome" type="text" autocomplete="name"></label>
+          <label>Função na pizzaria<input id="meta_funcao" type="text"></label>
+          <label>Data das respostas<input id="meta_data" type="date"></label>
+          <label>Nome de quem aprovará as regras finais<input id="meta_aprovador" type="text"></label>
+        </div>
+      </section>
+
+      <div id="questionnaire"></div>
+
+      <section class="final-card" id="finalizacao">
+        <h2>Finalização</h2>
+        <label>Pendências que precisam ser resolvidas antes da ativação<textarea id="final_pendencias" rows="5"></textarea></label>
+        <div class="grid two">
+          <label>Nome do responsável pela aprovação final<input id="final_responsavel" type="text"></label>
+          <label>Data da aprovação final<input id="final_data" type="date"></label>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button type="button" class="secondary" id="saveBtn">Salvar agora</button>
+        <button type="button" class="secondary" id="jsonBtn">Exportar dados para a NORIA (JSON)</button>
+        <button type="button" class="secondary" id="printBtn">Imprimir / salvar como PDF</button>
+        <button type="button" class="primary" id="pdfBtn">Gerar e baixar PDF</button>
+      </div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
