@@ -6,12 +6,17 @@ Levantamento de regras de atendimento para configurar a NORIA na pizzaria
 site estático, perguntas condicionais, fichas repetíveis, cenários de conversa com destino
 IA/equipe, salvamento no navegador e exportação em PDF.
 
-## Dados já levantados do Instagram (o cliente só confirma)
+## Dados já levantados (não são perguntados de novo)
 
-- Funcionamento: todos os dias, 18h às 23h30 (pergunta 2.1.1).
-- WhatsApp: (24) 99871-8304 (pergunta 1.2.1).
-- Divulga promoções, brindes e sorteios; destaques "Sextou" e "Sabadou" (seção 4).
-- Endereço e cardápio não estão públicos: perguntados nas seções 2.2 e 3.
+A seção 1, "O que já sabemos", mostra só para leitura o que veio do Instagram, com um
+único campo para correções:
+
+- Funcionamento: todos os dias, 18h às 23h30.
+- WhatsApp: (24) 99871-8304.
+- Divulga promoções, brindes e sorteios; destaques "Sextou" e "Sabadou".
+- Regras fixas: a IA não inventa valores e não promete reembolso, desconto ou pizza nova.
+
+Endereço e cardápio não estão públicos e são perguntados nas seções 3 e 4.
 
 ## Como as respostas viram configuração
 
